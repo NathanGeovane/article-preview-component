@@ -12,7 +12,7 @@ function btnsLogic() {
     shareBtn.classList.remove("hidden");
     shareBtn.classList.add("active");
   }
-  if (window.innerWidth > 870 && shareOverlay.classList.contains("active")) {
+  if (window.innerWidth >= 870 && shareOverlay.classList.contains("active")) {
     shareBtn.classList.remove("hidden");
   } else {
     shareBtn.classList.remove("active");
