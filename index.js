@@ -8,23 +8,16 @@ const shareBtns = [shareBtn, shareBtnExit];
 shareBtns.map((btn) =>
   btn.addEventListener("click", () => {
     shareOverlay.classList.toggle("active");
-    console.log(window.innerWidth);
     if (shareOverlay.classList.contains("active") && window.innerWidth < 870) {
       shareBtn.classList.add("hidden");
     } else {
       shareBtn.classList.remove("hidden");
     }
-    if (window.innerWidth > 870) {
-      shareBtn.classList.toggle("active");
+    if (window.innerWidth > 870 && shareOverlay.classList.contains("active")) {
+      shareBtn.classList.add("active");
+      shareBtn.classList.remove("hidden");
+    } else {
+      shareBtn.classList.remove("active");
     }
   })
 );
-
-/* shareBtn.addEventListener("click", () => {
-  shareOverlay.classList.toggle("hidden");
-  shareBtn.classList.toggle("hidden");
-});
-shareBtnExit.addEventListener("click", () => {
-  shareOverlay.classList.toggle("hidden");
-  shareBtn.classList.toggle("hidden");
-}); */
