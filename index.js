@@ -8,7 +8,15 @@ const shareBtns = [shareBtn, shareBtnExit];
 shareBtns.map((btn) =>
   btn.addEventListener("click", () => {
     shareOverlay.classList.toggle("active");
-    shareBtn.classList.toggle("active");
+    console.log(window.innerWidth);
+    if (shareOverlay.classList.contains("active") && window.innerWidth < 870) {
+      shareBtn.classList.add("hidden");
+    } else {
+      shareBtn.classList.remove("hidden");
+    }
+    if (window.innerWidth > 870) {
+      shareBtn.classList.toggle("active");
+    }
   })
 );
 

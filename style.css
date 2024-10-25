@@ -224,6 +224,10 @@ body {
   fill: white;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: 450px) {
   .card {
     width: 80%;
@@ -301,9 +305,5 @@ body {
 
   .btn-share--exit {
     display: none;
-  }
-
-  .btn-share {
-    display: flex;
   }
 }
